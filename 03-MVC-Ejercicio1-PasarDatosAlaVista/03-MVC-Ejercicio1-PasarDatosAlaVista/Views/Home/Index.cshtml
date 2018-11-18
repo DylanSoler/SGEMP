@@ -1,0 +1,29 @@
+﻿@model _03_MVC_Ejercicio1_PasarDatosAlaVista.Models.clsPersona
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <h3>Hola @ViewData["Saludo"] </h3>
+
+    <p>La fecha actual es: @ViewBag.FechaCompleta</p>
+
+    <h4>Persona</h4>
+    <p>Nombre: @Model.nombre</p>
+    <p>Apellidos: @Model.apellidos</p>
+    <p>Fecha de nacimiento: @Model.fechaNacimiento</p>
+    <p>Direccion: @Model.direccion</p>
+    <p>Telefono: @Model.telefono</p>
+
+    <p>@Html.ActionLink("Listado","ListadoPersonas")</p>
+</body>
+</html>

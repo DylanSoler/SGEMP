@@ -1,0 +1,40 @@
+﻿@model _04_MVC_Ejercicio1_PasarDatosAControlador.Models.ViewModels.clsPersonaConListadoDepartamentos
+@{
+    ViewBag.Title = "Editar";
+}
+
+<h2>Editar</h2>
+<html>
+<head>
+
+</head>
+
+<body>
+
+    @using (Html.BeginForm())
+    {
+
+        <p>ID: </p>@Html.TextBoxFor(m => m.idPersona)<br />
+        <p>Nombre: </p><input name="nombre" type="text" value="@Model.nombre" /><br />
+        <p>Apellidos: </p>@Html.TextBox("apellidos")<br />
+        <p>Fecha de nacimiento: </p>@Html.TextBoxFor(m => m.fechaNacimiento)<br />
+        <p>Telefono: </p>@Html.TextBoxFor(m => m.telefono)<br />
+        <p>Direccion: </p>@Html.TextBoxFor(m => m.direccion)<br />
+
+
+
+        <br />
+        @Html.DropDownListFor(x => Model.idDepartamento, new SelectList(Model.departamentos, "id", "nombre"))
+
+
+        <br /><br />
+        <input type="submit" />
+
+    }
+
+
+
+</body>
+
+</html>
+

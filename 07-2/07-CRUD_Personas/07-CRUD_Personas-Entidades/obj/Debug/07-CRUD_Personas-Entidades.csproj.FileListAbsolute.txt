@@ -1,0 +1,12 @@
+C:\Users\dasoler\source\repos\SGEMP\07-CRUD_Personas\07-CRUD_Personas-Entidades\bin\Debug\07-CRUD_Personas-Entidades.dll
+C:\Users\dasoler\source\repos\SGEMP\07-CRUD_Personas\07-CRUD_Personas-Entidades\bin\Debug\07-CRUD_Personas-Entidades.pdb
+C:\Users\dasoler\source\repos\SGEMP\07-CRUD_Personas\07-CRUD_Personas-Entidades\obj\Debug\07-CRUD_Personas-Entidades.csprojAssemblyReference.cache
+C:\Users\dasoler\source\repos\SGEMP\07-CRUD_Personas\07-CRUD_Personas-Entidades\obj\Debug\07-CRUD_Personas-Entidades.csproj.CoreCompileInputs.cache
+C:\Users\dasoler\source\repos\SGEMP\07-CRUD_Personas\07-CRUD_Personas-Entidades\obj\Debug\07-CRUD_Personas-Entidades.dll
+C:\Users\dasoler\source\repos\SGEMP\07-CRUD_Personas\07-CRUD_Personas-Entidades\obj\Debug\07-CRUD_Personas-Entidades.pdb
+C:\Users\NitroPC\source\repos\07-CRUD_Personas\07-CRUD_Personas-Entidades\bin\Debug\07-CRUD_Personas-Entidades.dll
+C:\Users\NitroPC\source\repos\07-CRUD_Personas\07-CRUD_Personas-Entidades\bin\Debug\07-CRUD_Personas-Entidades.pdb
+C:\Users\NitroPC\source\repos\07-CRUD_Personas\07-CRUD_Personas-Entidades\obj\Debug\07-CRUD_Personas-Entidades.csprojAssemblyReference.cache
+C:\Users\NitroPC\source\repos\07-CRUD_Personas\07-CRUD_Personas-Entidades\obj\Debug\07-CRUD_Personas-Entidades.csproj.CoreCompileInputs.cache
+C:\Users\NitroPC\source\repos\07-CRUD_Personas\07-CRUD_Personas-Entidades\obj\Debug\07-CRUD_Personas-Entidades.dll
+C:\Users\NitroPC\source\repos\07-CRUD_Personas\07-CRUD_Personas-Entidades\obj\Debug\07-CRUD_Personas-Entidades.pdb

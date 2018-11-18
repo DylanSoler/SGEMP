@@ -1,0 +1,11 @@
+C:\Users\dasoler\source\repos\PruebaExamen1Evaluacion\PruebaExamen1Evaluacion-Entidades\bin\Debug\PruebaExamen1Evaluacion-Entidades.dll
+C:\Users\dasoler\source\repos\PruebaExamen1Evaluacion\PruebaExamen1Evaluacion-Entidades\bin\Debug\PruebaExamen1Evaluacion-Entidades.pdb
+C:\Users\dasoler\source\repos\PruebaExamen1Evaluacion\PruebaExamen1Evaluacion-Entidades\obj\Debug\PruebaExamen1Evaluacion-Entidades.csproj.CoreCompileInputs.cache
+C:\Users\dasoler\source\repos\PruebaExamen1Evaluacion\PruebaExamen1Evaluacion-Entidades\obj\Debug\PruebaExamen1Evaluacion-Entidades.dll
+C:\Users\dasoler\source\repos\PruebaExamen1Evaluacion\PruebaExamen1Evaluacion-Entidades\obj\Debug\PruebaExamen1Evaluacion-Entidades.pdb
+C:\Users\NitroPC\source\repos\PruebaExamen1Evaluacion\PruebaExamen1Evaluacion-Entidades\bin\Debug\PruebaExamen1Evaluacion-Entidades.dll
+C:\Users\NitroPC\source\repos\PruebaExamen1Evaluacion\PruebaExamen1Evaluacion-Entidades\bin\Debug\PruebaExamen1Evaluacion-Entidades.pdb
+C:\Users\NitroPC\source\repos\PruebaExamen1Evaluacion\PruebaExamen1Evaluacion-Entidades\obj\Debug\PruebaExamen1Evaluacion-Entidades.csprojAssemblyReference.cache
+C:\Users\NitroPC\source\repos\PruebaExamen1Evaluacion\PruebaExamen1Evaluacion-Entidades\obj\Debug\PruebaExamen1Evaluacion-Entidades.csproj.CoreCompileInputs.cache
+C:\Users\NitroPC\source\repos\PruebaExamen1Evaluacion\PruebaExamen1Evaluacion-Entidades\obj\Debug\PruebaExamen1Evaluacion-Entidades.dll
+C:\Users\NitroPC\source\repos\PruebaExamen1Evaluacion\PruebaExamen1Evaluacion-Entidades\obj\Debug\PruebaExamen1Evaluacion-Entidades.pdb

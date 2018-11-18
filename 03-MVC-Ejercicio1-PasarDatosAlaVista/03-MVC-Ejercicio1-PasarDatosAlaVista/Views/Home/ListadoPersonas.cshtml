@@ -1,0 +1,44 @@
+﻿@model List<_03_MVC_Ejercicio1_PasarDatosAlaVista.Models.clsPersona>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListadoPersonas</title>
+</head>
+<body>
+    <h3>Personas: </h3>
+
+    <table border="1">
+        <!--si mandas el objeto:
+    List<_03_MVC_Ejercicio1_PasarDatosAlaVista.Models.clsListadoPersonas>
+        model.listadoCompletoPersonas
+    -->
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Fecha Nacimiento</th>
+            <th>Telefono</th>
+            <th>Direccion</th>
+        </tr>
+
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.idPersona</td>
+                <td>@x.nombre</td>
+                <td>@x.apellidos</td>
+                <td>@x.fechaNacimiento</td>
+                <td>@x.telefono</td>
+                <td>@x.direccion</td>
+            </tr>
+        }
+    </table>
+    
+</body>
+</html>

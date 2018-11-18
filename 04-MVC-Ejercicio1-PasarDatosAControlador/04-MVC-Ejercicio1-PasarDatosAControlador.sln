@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-MVC-Ejercicio1-PasarDatosAControlador", "04-MVC-Ejercicio1-PasarDatosAControlador\04-MVC-Ejercicio1-PasarDatosAControlador.csproj", "{BB58F38A-BAA5-4589-8CF4-7585A0C48EB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB58F38A-BAA5-4589-8CF4-7585A0C48EB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB58F38A-BAA5-4589-8CF4-7585A0C48EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB58F38A-BAA5-4589-8CF4-7585A0C48EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB58F38A-BAA5-4589-8CF4-7585A0C48EB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E9A5E66-B607-41E0-A2B7-5FDD7BD1C6DE}
+	EndGlobalSection
+EndGlobal

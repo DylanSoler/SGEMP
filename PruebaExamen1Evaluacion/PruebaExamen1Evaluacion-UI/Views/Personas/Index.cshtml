@@ -1,0 +1,64 @@
+﻿@model PruebaExamen1Evaluacion_UI.Models.ViewModels.clsListadoDepartamentosMasListadoPersonas
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @* Envio mediante submit del departamento seleccionado del list mostrado en un dropdownlist *@
+    @using (Html.BeginForm())
+    {
+
+    @Html.DropDownListFor(x => Model.idDepartamentoSeleccionado, new SelectList(Model.listadoDepartamentos, "id", "nombre"))
+    
+    <input type="submit" />
+    }
+
+    @* Si ya se ha seleccionado departamento se muestra el listado de personas ya relleno *@
+    @if (Model.listadoPersonasPorDepart.Count() != 0)
+    {
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.listadoPersonasPorDepart[0].nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.listadoPersonasPorDepart[0].apellidos)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.listadoPersonasPorDepart[0].telefono)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.listadoPersonasPorDepart)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.apellidos)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.telefono)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.idPersona })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    }
+
+
+</body>
+</html>

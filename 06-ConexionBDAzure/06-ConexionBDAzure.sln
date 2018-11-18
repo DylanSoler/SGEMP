@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-ConexionBDAzure", "06-ConexionBDAzure\06-ConexionBDAzure.csproj", "{6EEF6420-2DA0-48E0-B9CF-94C8AC30BDDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EEF6420-2DA0-48E0-B9CF-94C8AC30BDDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EEF6420-2DA0-48E0-B9CF-94C8AC30BDDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EEF6420-2DA0-48E0-B9CF-94C8AC30BDDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EEF6420-2DA0-48E0-B9CF-94C8AC30BDDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0EF2B1DB-19C0-4ACE-9F10-B3E34D273C43}
+	EndGlobalSection
+EndGlobal
