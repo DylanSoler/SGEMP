@@ -1,0 +1,11 @@
+C:\Users\dasoler\source\repos\SGEMP\ExamenDylan1Ev\ExamenDylan1Ev-BL\bin\Debug\ExamenDylan1Ev-BL.dll
+C:\Users\dasoler\source\repos\SGEMP\ExamenDylan1Ev\ExamenDylan1Ev-BL\bin\Debug\ExamenDylan1Ev-BL.pdb
+C:\Users\dasoler\source\repos\SGEMP\ExamenDylan1Ev\ExamenDylan1Ev-BL\bin\Debug\ExamenDylan1Ev-DAL.dll
+C:\Users\dasoler\source\repos\SGEMP\ExamenDylan1Ev\ExamenDylan1Ev-BL\bin\Debug\ExamenDylan1Ev-Entidades.dll
+C:\Users\dasoler\source\repos\SGEMP\ExamenDylan1Ev\ExamenDylan1Ev-BL\bin\Debug\ExamenDylan1Ev-DAL.pdb
+C:\Users\dasoler\source\repos\SGEMP\ExamenDylan1Ev\ExamenDylan1Ev-BL\bin\Debug\ExamenDylan1Ev-Entidades.pdb
+C:\Users\dasoler\source\repos\SGEMP\ExamenDylan1Ev\ExamenDylan1Ev-BL\obj\Debug\ExamenDylan1Ev-BL.csprojAssemblyReference.cache
+C:\Users\dasoler\source\repos\SGEMP\ExamenDylan1Ev\ExamenDylan1Ev-BL\obj\Debug\ExamenDylan1Ev-BL.csproj.CoreCompileInputs.cache
+C:\Users\dasoler\source\repos\SGEMP\ExamenDylan1Ev\ExamenDylan1Ev-BL\obj\Debug\ExamenDylan1Ev-BL.csproj.CopyComplete
+C:\Users\dasoler\source\repos\SGEMP\ExamenDylan1Ev\ExamenDylan1Ev-BL\obj\Debug\ExamenDylan1Ev-BL.dll
+C:\Users\dasoler\source\repos\SGEMP\ExamenDylan1Ev\ExamenDylan1Ev-BL\obj\Debug\ExamenDylan1Ev-BL.pdb
