@@ -1,0 +1,6 @@
+C:\Users\dasoler\source\repos\SGEMP\08-ApiRestPersonas\08-ApiRestPersonas-Entidades\bin\Release\08-ApiRestPersonas-Entidades.dll
+C:\Users\dasoler\source\repos\SGEMP\08-ApiRestPersonas\08-ApiRestPersonas-Entidades\bin\Release\08-ApiRestPersonas-Entidades.pdb
+C:\Users\dasoler\source\repos\SGEMP\08-ApiRestPersonas\08-ApiRestPersonas-Entidades\obj\Release\08-ApiRestPersonas-Entidades.csprojAssemblyReference.cache
+C:\Users\dasoler\source\repos\SGEMP\08-ApiRestPersonas\08-ApiRestPersonas-Entidades\obj\Release\08-ApiRestPersonas-Entidades.csproj.CoreCompileInputs.cache
+C:\Users\dasoler\source\repos\SGEMP\08-ApiRestPersonas\08-ApiRestPersonas-Entidades\obj\Release\08-ApiRestPersonas-Entidades.dll
+C:\Users\dasoler\source\repos\SGEMP\08-ApiRestPersonas\08-ApiRestPersonas-Entidades\obj\Release\08-ApiRestPersonas-Entidades.pdb

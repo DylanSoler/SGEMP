@@ -67,7 +67,7 @@ namespace _08_ApiRestPersonas_API.Controllers
         /// </summary>
         /// <param name="oPersona"></param>
         /// <returns>int con el numero de filas afectadas</returns>
-        public int Post(clsPersona oPersona)
+        public int Post([FromBody]clsPersona oPersona)
         {
 
             clsManejadoraPersona_BL manejadora = new clsManejadoraPersona_BL();

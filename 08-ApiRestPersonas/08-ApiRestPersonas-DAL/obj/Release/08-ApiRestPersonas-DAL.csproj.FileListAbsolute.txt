@@ -1,0 +1,9 @@
+C:\Users\dasoler\source\repos\SGEMP\08-ApiRestPersonas\08-ApiRestPersonas-DAL\bin\Release\08-ApiRestPersonas-DAL.dll
+C:\Users\dasoler\source\repos\SGEMP\08-ApiRestPersonas\08-ApiRestPersonas-DAL\bin\Release\08-ApiRestPersonas-DAL.pdb
+C:\Users\dasoler\source\repos\SGEMP\08-ApiRestPersonas\08-ApiRestPersonas-DAL\bin\Release\08-ApiRestPersonas-Entidades.dll
+C:\Users\dasoler\source\repos\SGEMP\08-ApiRestPersonas\08-ApiRestPersonas-DAL\bin\Release\08-ApiRestPersonas-Entidades.pdb
+C:\Users\dasoler\source\repos\SGEMP\08-ApiRestPersonas\08-ApiRestPersonas-DAL\obj\Release\08-ApiRestPersonas-DAL.csprojAssemblyReference.cache
+C:\Users\dasoler\source\repos\SGEMP\08-ApiRestPersonas\08-ApiRestPersonas-DAL\obj\Release\08-ApiRestPersonas-DAL.csproj.CoreCompileInputs.cache
+C:\Users\dasoler\source\repos\SGEMP\08-ApiRestPersonas\08-ApiRestPersonas-DAL\obj\Release\08-ApiRestPersonas-DAL.csproj.CopyComplete
+C:\Users\dasoler\source\repos\SGEMP\08-ApiRestPersonas\08-ApiRestPersonas-DAL\obj\Release\08-ApiRestPersonas-DAL.dll
+C:\Users\dasoler\source\repos\SGEMP\08-ApiRestPersonas\08-ApiRestPersonas-DAL\obj\Release\08-ApiRestPersonas-DAL.pdb
