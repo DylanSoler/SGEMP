@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 
 namespace _07_CRUD_Personas_UI.Controllers
 {
@@ -80,20 +81,32 @@ namespace _07_CRUD_Personas_UI.Controllers
         [HttpPost]
         public ActionResult Create(clsPersona oPersona)
         {
-            int filas = 0;
-            clsManejadoraPersona_BL manejadora = new clsManejadoraPersona_BL();
-            clsListadoPersonas_BL gestora = new clsListadoPersonas_BL();
-            List<clsPersona> listado = new List<clsPersona>();
+            
 
-            try{
-                filas = manejadora.insertarPersona_BL(oPersona);
-                ViewData["FilasAfectadas"] = $"Se ha insertado correctamente {filas} registro";
-                listado = gestora.listadoCompletoPersonas_BL();
-            } catch (Exception e) {
-                ViewData["ErrorNoControlado"] = "Ha ocurrido un error en la insercion";
+            if (!ModelState.IsValid)
+            {
+                return View(oPersona);
             }
+            else
+            {
+                int filas = 0;
+                clsManejadoraPersona_BL manejadora = new clsManejadoraPersona_BL();
+                clsListadoPersonas_BL gestora = new clsListadoPersonas_BL();
+                List<clsPersona> listado = new List<clsPersona>();
 
-            return View("listadoCompleto",listado);
+                try
+                {
+                    filas = manejadora.insertarPersona_BL(oPersona);
+                    ViewData["FilasAfectadas"] = $"Se ha insertado correctamente {filas} registro";
+                    listado = gestora.listadoCompletoPersonas_BL();
+                }
+                catch (Exception e)
+                {
+                    ViewData["ErrorNoControlado"] = "Ha ocurrido un error en la insercion";
+                }
+
+                return View("listadoCompleto", listado);
+            }
         }
 
         /// <summary>
@@ -130,20 +143,31 @@ namespace _07_CRUD_Personas_UI.Controllers
         [HttpPost]
         public ActionResult Edit(clsPersona oPersona)
         {
-            int filas;
-            clsManejadoraPersona_BL manejadora = new clsManejadoraPersona_BL();
-            clsListadoPersonas_BL gestora = new clsListadoPersonas_BL();
-            List<clsPersona> listado = new List<clsPersona>();
+            if (!ModelState.IsValid)
+            {
+                return View(oPersona);
+            }
+            else
+            {
+                int filas;
+                clsManejadoraPersona_BL manejadora = new clsManejadoraPersona_BL();
+                clsListadoPersonas_BL gestora = new clsListadoPersonas_BL();
+                List<clsPersona> listado = new List<clsPersona>();
 
-            try{
-                filas = manejadora.editarPersona_BL(oPersona);
-                ViewData["FilasAfectadas"] = $"Se ha actualizado correctamente {filas} registro";
-                listado = gestora.listadoCompletoPersonas_BL();
-            } catch (Exception e) {
-                ViewData["ErrorNoControlado"] = "Ha ocurrido un error en la actualizacion";
+                try
+                {
+                    filas = manejadora.editarPersona_BL(oPersona);
+                    ViewData["FilasAfectadas"] = $"Se ha actualizado correctamente {filas} registro";
+                    listado = gestora.listadoCompletoPersonas_BL();
+                }
+                catch (Exception e)
+                {
+                    ViewData["ErrorNoControlado"] = "Ha ocurrido un error en la actualizacion";
+                }
+
+                return View("listadoCompleto", listado);
             }
 
-            return View("listadoCompleto",listado);
         }
 
     }
