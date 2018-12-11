@@ -13,7 +13,7 @@ function llamada() {
     
     var miLlamada = new XMLHttpRequest();
     //miLlamada.open("GET", "/Home/Index");
-    miLlamada.open("GET", "https://apirestpersonasdylan.azurewebsites.net/api/Personas/4");
+    miLlamada.open("GET", "https://apirestpersonasdylan.azurewebsites.net/api/Personas/");
 
     //mientras vienen los datos
     miLlamada.onreadystatechange = function () {
@@ -26,10 +26,22 @@ function llamada() {
         }
         else if (miLlamada.readyState == 4 && miLlamada.status == 200)
         {
-            document.getElementById("textoMostrar").innerHTML = miLlamada.responseText;
+            var oPersona = new Persona();
+
+            var arrayPersonas = JSON.parse(miLlamada.responseText);
+
+            oPersona = arrayPersonas[0];
+            //document.getElementById("textoMostrar").innerHTML = miLlamada.responseText;
+            document.getElementById("textoMostrar").innerHTML = oPersona.nombre;
         }
     }
-
     miLlamada.send();
+}
 
+class Persona {
+    constructor(nombre, apellidos, fechaNacimiento) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.fechaNacimiento = fechaNacimiento;
+    }
 }
