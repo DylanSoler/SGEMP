@@ -70,7 +70,9 @@
     <Content Include="Content\StyleSheet.css" />
     <Content Include="Scripts\Entidades.js" />
     <Content Include="Scripts\FuncionesAJAX.js" />
-    <Content Include="Views\edit.png" />
+    <Content Include="Views\Imagenes\add.png" />
+    <Content Include="Views\Imagenes\delete.png" />
+    <Content Include="Views\Imagenes\edit.png" />
     <Content Include="Views\index.html" />
     <Content Include="Web.config" />
   </ItemGroup>

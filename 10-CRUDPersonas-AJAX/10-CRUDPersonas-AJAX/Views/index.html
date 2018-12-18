@@ -11,6 +11,9 @@
     <h2>Personas</h2>
     <br />
 
+    <input id="create" type="image" src="Imagenes/add.png" width="20" height="20" />  Create new
+    <br /><br />
+
     <table id="tablaPersonas">
 
         <tr>
@@ -25,6 +28,35 @@
         </tr>
 
     </table>
+
+    <div id="modalEliminar" class="modal">
+        <div class="modal-content">
+            <p>Esta seguro?</p>
+            <button id="AceptarEliminar">Aceptar</button>
+            <button id="CancelarEliminar">Cancelar</button>
+        </div>
+    </div>
+
+    <div id="modalCrear" class="modal">
+            <form id="form" class="modal-content">
+                <label>Nombre</label> <br />
+                <input id="nombre" type="text" required/><br /><br />
+                <label>Apellidos</label><br />
+                <input id="apellidos" type="text" required/><br /><br />
+                <label>Direccion</label><br />
+                <input id="direccion" type="text" required/><br /><br />
+                <label>Telefono</label><br />
+                <input id="telefono" type="text" required/><br /><br />
+                <label>Fecha de nacimiento</label><br />
+                <input id="fechaNacimiento" type="date" required/><br /><br />
+                <label>id departamento</label><br />
+                <input id="idDepartamento" type="number" required/><br /><br /><br />
+
+                <button id="botonCrear">Crear</button>
+                <button id="botonCancelar">Cancelar</button>
+
+            </form>
+    </div>
 
 </body>
 </html>
