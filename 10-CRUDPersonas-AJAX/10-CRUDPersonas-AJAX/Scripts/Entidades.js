@@ -1,5 +1,7 @@
 ﻿class Persona {
-    constructor(nombre, apellidos, fechaNacimiento, direccion, telefono, idDepartamento) {
+
+    constructor(idPersona, nombre, apellidos, fechaNacimiento, direccion, telefono, idDepartamento) {
+        this.idPersona = idPersona;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.fechaNacimiento = fechaNacimiento;
@@ -7,4 +9,5 @@
         this.telefono = telefono;
         this.idDepartamento = idDepartamento;
     }
+
 }

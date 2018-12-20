@@ -1,4 +1,5 @@
-﻿window.onload = inicializaEventos;
+﻿
+window.onload = inicializaEventos;
 
 function inicializaEventos() {
 
@@ -7,7 +8,8 @@ function inicializaEventos() {
 }
 
 
-// Hace una peticion get a la api y ejecuta la funcion crearTabla a partir del resultado obtenido
+
+// Hace una peticion get a la api y ejecuta la funcion crearTabla a partir del resultado obtenido (GET)
 function cargarLista() {
 
     var miLlamada = new XMLHttpRequest();
@@ -78,36 +80,8 @@ function crearTabla(listado) {
     }
 }
 
-//Editar persona
-function clickEditar() {
 
-        
-}
-
-//Eliminar persona
-function clickEliminar() {
-
-    var elim = modalEliminar();
-
-    if (elim) {
-        var id = this.id;
-        var llamadaEliminar = new XMLHttpRequest();
-        var ruta = "https://apirestpersonasdylan.azurewebsites.net/api/Personas/" + id;
-        llamadaEliminar.open("DELETE", ruta);
-
-        llamadaEliminar.onreadystatechange = function () {
-
-            if (llamadaEliminar.readyState == 4 && llamadaEliminar.status == 200) {
-
-                alert("Persona borrada con exito!");
-                actualizarTabla();
-            }
-        }
-        llamadaEliminar.send();
-    }
-}
-
-//Crear persona
+//Rellena el modal para crear persona y ejecuta la funcion de insercion
 function clickCrear() {
 
     var crear = document.getElementById("modalCrear");
@@ -117,17 +91,25 @@ function clickCrear() {
 
     btnCrear.onclick = function () {
 
-        var nom = document.getElementById("nombre").value;
-        var ape = document.getElementById("apellidos").value;
-        var fec = document.getElementById("fechaNacimiento").value;
+        var idP = 1;
+        var nomb = document.getElementById("nombre").value;
+        var apell = document.getElementById("apellidos").value;
+        var fechaN = document.getElementById("fechaNacimiento").value;
         var dir = document.getElementById("direccion").value;
-        var tfn = document.getElementById("telefono").value;
-        var idD = document.getElementById("idDepartamento").value;
+        var tel = document.getElementById("telefono").value;
+        var idDep = document.getElementById("idDepartamento").value;
 
-        var oP = new Persona(nom, ape, fec, dir, tfn, idD);
-        alert("Nombre: " + oP.nombre);
+        //var oP = new Persona(idPersona, nombre, apellidos, fechaNacimiento, direccion, telefono, idDepartamento);
+        var oP = new Object();
+        oP.idPersona = idP;
+        oP.nombre = nomb;
+        oP.apellidos = apell;
+        oP.fechaNacimiento = fechaN;
+        oP.direccion = dir;
+        oP.telefono = tel;
+        oP.idDepartamento = idDep;
 
-        crear.style.display = "none";
+        insertarPersona(oP);
     }
 
     btnCancelar.onclick = function () {
@@ -147,34 +129,146 @@ function actualizarTabla() {
     cargarLista();
 }
 
-//Modal eliminar
-function modalEliminar() {
+//Inserta una persona (POST)
+function insertarPersona(pers) {
 
-    var ret = false;
+    var llamadaInsertar = new XMLHttpRequest();
+    var ruta = "https://apirestpersonasdylan.azurewebsites.net/api/Personas/";
+    llamadaInsertar.open('POST', ruta, false);
+    llamadaInsertar.setRequestHeader('Content-type', 'application/json');
+
+    llamadaInsertar.onreadystatechange = function () {
+
+        if (llamadaInsertar.readyState == 4 && llamadaInsertar.status == 200) {
+
+            alert("Persona creada con exito!");
+            crear.style.display = "none";
+            actualizarTabla();
+        }
+    }
+
+    llamadaInsertar.send(JSON.stringify(pers));
+}
+
+
+//Eliminar una persona (DELETE)
+function clickEliminar() {
+
+    //modal
+    var id = this.id;
     var modal = document.getElementById("modalEliminar");
     var aceptar = document.getElementById("AceptarEliminar");
     var cancelar = document.getElementById("CancelarEliminar");
     modal.style.display = "block";
 
-    // When the user clicks on <span> (x), close the modal
+    //Si acepta
     aceptar.onclick = function () {
         modal.style.display = "none";
-        ret = true;
+
+        //eliminar
+        var llamadaEliminar = new XMLHttpRequest();
+        var ruta = "https://apirestpersonasdylan.azurewebsites.net/api/Personas/" + id;
+        llamadaEliminar.open("DELETE", ruta);
+
+        llamadaEliminar.onreadystatechange = function () {
+
+           if (llamadaEliminar.readyState == 4 && llamadaEliminar.status == 200) {
+
+              //actualizar
+              actualizarTabla();
+              alert("Persona borrada con exito!");
+            }
+        }
+        llamadaEliminar.send();
     }
 
+    //Si cancela
     cancelar.onclick = function () {
         modal.style.display = "none";
     }
-
-    // When the user clicks anywhere outside of the modal, close it
-    //window.onclick = function (event) {
-    //    if (event.target == modal) {
-    //        modal.style.display = "none";
-    //    }
-    //}
-
-
-
-    return ret;
 }
 
+//Actualiza una persona (PUT)
+function clickEditar() {
+
+    var editar = document.getElementById("modalEditar");
+    var btnConfirmar = document.getElementById("botonConfirmar");
+    var btnCancelar = document.getElementById("botonCancelarEditar");
+    editar.style.display = "block";
+
+    var pers = consultarPersona(this.id);
+
+    var id = document.getElementById("idPersona");
+    id.setAttribute("value", pers.idPersona);
+    document.getElementById("nombreE").setAttribute("value", pers.nombre);
+    document.getElementById("apellidosE").setAttribute("value", pers.apellidos);
+    document.getElementById("direccionE").setAttribute("value", pers.direccion);
+    document.getElementById("telefonoE").setAttribute("value", pers.telefono);
+    var porque2 = pers.fechaNacimiento.substr(0, 4)+"-"+pers.fechaNacimiento.substr(5, 2)+"-"+pers.fechaNacimiento.substr(8, 2);
+    document.getElementById("fechaNacimientoE").setAttribute("value", porque2);
+    document.getElementById("idDepartamentoE").setAttribute("value", pers.idDepartamento);
+
+    btnConfirmar.onclick = function () {
+        id.focus();
+        var per = new Object();
+        per = recogerDatosPersonaModalCrear();
+        var miLlamada = new XMLHttpRequest();
+        var ruta = "https://apirestpersonasdylan.azurewebsites.net/api/Personas/" + id.getAttribute("value");
+        miLlamada.open("PUT", ruta);
+        miLlamada.setRequestHeader('Content-type', 'application/json');
+
+        if (miLlamada.readyState == 4 && miLlamada.status == 200) {
+
+            //actualizar
+            alert("Persona editada con exito!");
+            editar.style.display = "none";
+            actualizarTabla();
+        }
+
+        miLlamada.send(JSON.stringify(per));
+    }
+
+    btnCancelar.onclick = function () {
+
+        editar.style.display = "none";
+    }
+}
+
+
+//Hace una peticion get de una persona segun id (GET{ID})
+function consultarPersona(id) {
+
+    var person;
+    var miLlamada = new XMLHttpRequest();
+    var ruta = "https://apirestpersonasdylan.azurewebsites.net/api/Personas/" + id;
+    miLlamada.open("GET", ruta, false);
+
+    miLlamada.onreadystatechange = function () {
+
+        if (miLlamada.readyState == 4 && miLlamada.status == 200) {
+
+            person = JSON.parse(miLlamada.responseText);
+
+        }
+    }
+
+    miLlamada.send();
+
+    return person;
+}
+
+//El nombre es bastante autodocumentado
+function recogerDatosPersonaModalCrear() {
+
+    var persona = new Object();
+    persona.idPersona = document.getElementById("idPersona").value;
+    persona.nombre = document.getElementById("nombreE").value;
+    persona.apellidos = document.getElementById("apellidosE").value;
+    persona.direccion = document.getElementById("direccionE").value;
+    persona.telefono = document.getElementById("telefonoE").value;
+    persona.fechaNacimiento = document.getElementById("fechaNacimientoE").value;
+    persona.idDepartamento = document.getElementById("idDepartamentoE").value;
+
+    return persona;
+
+}

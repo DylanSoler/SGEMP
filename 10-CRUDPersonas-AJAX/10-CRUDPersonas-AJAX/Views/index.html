@@ -8,13 +8,13 @@
 </head>
 <body>
 
-    <h2>Personas</h2>
+    <h1>Personas</h1>
     <br />
 
     <input id="create" type="image" src="Imagenes/add.png" width="20" height="20" />  Create new
     <br /><br />
 
-    <table id="tablaPersonas">
+    <table id="tablaPersonas" class="table">
 
         <tr>
             <th>id</th>
@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <div id="modalCrear" class="modal">
+    <div id="modalCrear" class="modal" data-effect="mfp-zoom-out">
             <form id="form" class="modal-content">
                 <label>Nombre</label> <br />
                 <input id="nombre" type="text" required/><br /><br />
@@ -56,6 +56,29 @@
                 <button id="botonCancelar">Cancelar</button>
 
             </form>
+    </div>
+
+    <div id="modalEditar" class="modal">
+        <form id="formE" class="modal-content">
+            <label>ID</label> <br />
+            <input id="idPersona" type="text" required readonly/><br /><br />
+            <label>Nombre</label> <br />
+            <input id="nombreE" type="text" required /><br /><br />
+            <label>Apellidos</label><br />
+            <input id="apellidosE" type="text" required /><br /><br />
+            <label>Direccion</label><br />
+            <input id="direccionE" type="text" required /><br /><br />
+            <label>Telefono</label><br />
+            <input id="telefonoE" type="text" required /><br /><br />
+            <label>Fecha de nacimiento</label><br />
+            <input id="fechaNacimientoE" type="date" required /><br /><br />
+            <label>id departamento</label><br />
+            <input id="idDepartamentoE" type="number" required /><br /><br /><br />
+
+            <button id="botonConfirmar">Confirmar</button>
+            <button id="botonCancelarEditar">Cancelar</button>
+
+        </form>
     </div>
 
 </body>
