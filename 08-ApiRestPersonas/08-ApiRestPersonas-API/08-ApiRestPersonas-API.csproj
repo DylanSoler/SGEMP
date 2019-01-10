@@ -93,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\08-ApiRestPersonas-API20190108022212 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\ApiRestPersonasDylan - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

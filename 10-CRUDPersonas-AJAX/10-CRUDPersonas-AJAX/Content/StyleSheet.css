@@ -14,13 +14,13 @@ th {
     height: 30px;
     font-weight: bold;
     font-size: 16px;
-    min-width: 180px;
+    min-width: 100px;
     border-radius: 50px;
     line-height: 13px;
 }
 
 td {
-    min-width: 180px;
+    min-width: 100px;
     text-align:center;
 }
 

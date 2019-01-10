@@ -13,7 +13,7 @@ function inicializaEventos() {
 function cargarLista() {
 
     var miLlamada = new XMLHttpRequest();
-    miLlamada.open("GET", "https://apirestpersonasdylan.azurewebsites.net/api/Personas/");
+    miLlamada.open("GET", "https://08-apirestpersonas-api20190108022212.azurewebsites.net/api/Personas/");
 
     miLlamada.onreadystatechange = function () {
 
@@ -133,7 +133,7 @@ function actualizarTabla() {
 function insertarPersona(pers) {
 
     var llamadaInsertar = new XMLHttpRequest();
-    var ruta = "https://apirestpersonasdylan.azurewebsites.net/api/Personas/";
+    var ruta = "https://08-apirestpersonas-api20190108022212.azurewebsites.net/api/Personas/";
     llamadaInsertar.open('POST', ruta, false);
     llamadaInsertar.setRequestHeader('Content-type', 'application/json');
 
@@ -167,7 +167,7 @@ function clickEliminar() {
 
         //eliminar
         var llamadaEliminar = new XMLHttpRequest();
-        var ruta = "https://apirestpersonasdylan.azurewebsites.net/api/Personas/" + id;
+        var ruta = "https://08-apirestpersonas-api20190108022212.azurewebsites.net/api/Personas/" + id;
         llamadaEliminar.open("DELETE", ruta);
 
         llamadaEliminar.onreadystatechange = function () {
@@ -213,7 +213,7 @@ function clickEditar() {
         var per = new Object();
         per = recogerDatosPersonaModalCrear();
         var miLlamada = new XMLHttpRequest();
-        var ruta = "https://apirestpersonasdylan.azurewebsites.net/api/Personas/" + id.getAttribute("value");
+        var ruta = "https://08-apirestpersonas-api20190108022212.azurewebsites.net/api/Personas/" + id.getAttribute("value");
         miLlamada.open("PUT", ruta);
         miLlamada.setRequestHeader('Content-type', 'application/json');
 
@@ -240,7 +240,7 @@ function consultarPersona(id) {
 
     var person;
     var miLlamada = new XMLHttpRequest();
-    var ruta = "https://apirestpersonasdylan.azurewebsites.net/api/Personas/" + id;
+    var ruta = "https://08-apirestpersonas-api20190108022212.azurewebsites.net/api/Personas/" + id;
     miLlamada.open("GET", ruta, false);
 
     miLlamada.onreadystatechange = function () {
